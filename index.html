@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!--En la siguiente línea voy por el estilo CSS que ofrece Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--estilo CSS al que puede conmplementar o contradecir-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+        <style>
+			root {
+                --bs-body-font-family: 'Raleway', sans-serif;
+            }
+            section {
+                scroll-margin-top: 50px;
+            }
+            nav {
+                backdrop-filter: blur(0.5rem);
+            }
+            #foto {
+                background: transparent url("https://picsum.photos/id/16/800/600?blur=3") 0 0 no-repeat;
+                background-size: cover;
+            }
+            footer{
+                background: #84B4BF;
+            }
+        </style>
+        <title>María Jesús Montero</title>
+    </head>
+    <body>
+        <!--Barra de navegación fija al tope-->
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand py-4 text-white" href="index.html">María Jesús Montero</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white" href="#lasEspecialidades">Especialidades</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#losTrabajos">Trabajos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#lasOpiniones">Opiniones</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#losContactos">Contactos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Encabezado-->        
+        <header class="vh-100" id="foto">
+            <div class="position-absolute top-50 start-50 translate-middle w-50">
+                <p class="fs-4 text-white">
+                   ¡Bienvenidos a mi Portafolio! Aquí podrán ver algunos de mis trabajos destacados y mis áreas de profundización en el diseño. Durante mi carrera, me he <a href="#lasEspecialidades" class="link-light">especializado en diseño servicios, editorial y textil</a>.
+                </p>
+            </div>
+        </header>
+        <!--Los símbolos en este SVG escondido serán reutilizados más abajo-->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="personas" viewBox="0 0 16 16">
+                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+            </symbol>
+			 <symbol id="libro" viewBox="0 0 16 16">
+                  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+			</symbol>
+			 <symbol id="flechas" viewBox="0 0 16 16">
+                  <path d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242-2.532-4.431zM2.973 7.773l-1.255.337a.5.5 0 1 1-.26-.966l2.416-.647a.5.5 0 0 1 .612.353l.647 2.415a.5.5 0 0 1-.966.259l-.333-1.242-2.545 4.454a.5.5 0 0 0 .434.748H5a.5.5 0 0 1 0 1H1.723A1.5 1.5 0 0 1 .421 12.24l2.552-4.467zm10.89 1.463a.5.5 0 1 0-.868.496l1.716 3.004a.5.5 0 0 1-.434.748h-5.57l.647-.646a.5.5 0 1 0-.708-.707l-1.5 1.5a.498.498 0 0 0 0 .707l1.5 1.5a.5.5 0 1 0 .708-.707l-.647-.647h5.57a1.5 1.5 0 0 0 1.302-2.244l-1.716-3.004z"/>
+            </symbol>
+        </svg>
+        <!--Sección de #lasEspecialidades-->        
+        <section class="bg-light" id="lasEspecialidades">
+            <div class="container py-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#205B73"><use href="#personas"></use></svg> Diseño de Servicios
+                        </h2>
+                        <p>El diseño de servicios crea experiencias centradas en el cliente mediante la colaboración multidisciplinaria, la personalización, la mejora continua de interacciones de los usuarios en base a patrones de diseño.</p>
+                        <small>#servicios</small>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#205B73"><use href="#libro"></use></svg> Diseño Editorial
+                        </h2>
+                        <p>El diseño editorial y el branding combinan elementos visuales y narrativos para crear una identidad única, coherente, que refleje la esencia de una marca y que establezca una conexión significativa con el público objetivo. Se centra en visualizaciones e identidad.</p>
+                        <small>#editorial</small>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#205B73"><use href="#flechas"></use></svg> Textil e Indumentaria
+                        </h2>
+                        <p>El diseño textil fusiona la creatividad y la funcionalidad para desarrollar prendas innovadoras, considerando aspectos como la estética, el confort, la durabilidad y las tendencias de moda, con el objetivo de satisfacer las necesidades de los usuarios.</p>
+                        <small>#textil</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sección de #losTrabajos-->        
+        <section class="border-top border-bottom" id="losTrabajos">
+            <div class="container py-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="trabajos"></div>
+            </div>
+        </section>
+        <!--Sección de #lasOpiniones-->        
+        <section class="bg-light" id="lasOpiniones">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Opiniones</h2>
+                    <p class="lead mb-0">Algunos clientes felices</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+                        <!-- Primer comentario-->
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">🌸 "¡Impresionante trabajo de servicios! El diseño superó nuestras expectativas, brindando una experiencia personalizada y eficiente. Gracias por ayudarnos a destacar en el mercado".</p>
+                                <div class="small text-muted text-end">— Cliente Servicios Empresa</div>
+                            </div>
+                        </div>
+                        <!-- Segundo comentario-->
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">🌼 "El diseño editorial me sorprendió. Capturó la esencia de nuestra marca de manera excepcional. ¡Recomendado!"</p>
+                                <div class="small text-muted text-end">— Cliente Branding Empresa</div>
+                            </div>
+                        </div>
+                        <!-- Tercer comentario-->
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">🌷"El diseño textil es innovador y atractivo. el resultado fueron prendas que combinan estilo y comodidad de manera excepcional."</p>
+                                <div class="small text-muted text-end">— Cliente Diseño Textil</div>
+                            </div>
+                        </div>
+                        <!-- Listo, no más comentarios-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sección de #losContactos-->        
+        <section class="border-top border-bottom" id="losContactos">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Contactos</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">                        
+                                <h3 class="m-0 fs-5"><span class="fs-1">📍</span><br/>Dirección</h3>
+                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <h3 class="m-0 fs-5"><span class="fs-1">📩</span><br/>Email</h3>
+                                <div class="small text-black-50"><a href="#!">username@uc.cl</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <h3 class="m-0 fs-5"><span class="fs-1">📱</span><br/>Trayectoria</h3>
+                                <div class="small text-black-50"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-decoration-none">Más info</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- El pie de página-->
+        <footer class="py-4 text-white">
+            <div class="container px-5"><p class="text-center small">María Jesús Montero &copy; 2023</p></div>
+        </footer>
+        <!-- Lo que sigue es JavaScript a secas-->
+        <script>
+            async function portfolio() {
+                const consulta = await fetch("https://raw.githubusercontent.com/mjmonteroa/Clase-07/main/datos.json");
+                const data = await consulta.json();
+                var donde = document.querySelector("#trabajos");
+                data.forEach(function (t, i) {
+                    donde.innerHTML +=
+                        '<article class="col"><div class="card h-100 shadow-sm ' +
+                        t.soporte +
+                        '"><img src="' +
+                        t.fotos[0] +
+                        '" class="card-img-top"><div class="card-body"><h3 class="fs-5"><a href="single.html?nro=' +
+                        i +
+                        '" class="link-secondary">' +
+                        t.nombre +
+                        "</a></h3><p>" +
+                        t.abstract +
+                        "</p><small>#" +
+                        t.soporte +
+                        "</small></div></div></article>";
+                });
+            }
+            portfolio().catch((error) => console.error(error));
+        </script>
+        <!-- Lo que sigue es la biblioteca de Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+		<!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Más info</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Diseño y nuevo medios es un optativo que ofrece una introduccion al desarollo de aplicaciones web. En 8 clases he publicado 8 trabajos con GitHub Pages.
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="https://mjmonteroa.github.io/clase01" target="_blank">Clase 01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="https://mjmonteroa.github.io/clase02" target="_blank">Clase 02</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href=" https://mjmonteroa.github.io/clase-03/" target="_blank">Clase 03</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><a href="https://mjmonteroa.github.io/Evaluacion-1" target="_blank">Evaluación Nº1</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><a href="https://mjmonteroa.github.io/Clase-05/" target="_blank">Clase 05</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td><a href="https://mjmonteroa.github.io/Clase-06/" target="_blank">Clase 06</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td><a href="https://mjmonteroa.github.io/Clase-07" target="_blank">Clase 07</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td><a href="https://mjmonteroa.github.io/Ev2/" target="_blank">Evaluación Nº2</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Primero vamos a buscar los 90KB de la versión más reciente de jQuery-->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        </script>
+    </body>
+</html>
